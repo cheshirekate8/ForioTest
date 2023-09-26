@@ -25,7 +25,10 @@ function generate() {
             const randomColor = Math.floor(Math.random()*16777215).toString(16);
             container.setAttribute("style", `background-color: #${randomColor};`)
             button.setAttribute("style", `background-color: #${randomColor};`)
-
+            container.classList.add('animation-trigger');
+            setTimeout(() => {
+                container.classList.remove('animation-trigger');
+            }, 1001)
         })
 }
 

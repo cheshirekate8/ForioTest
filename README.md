@@ -40,4 +40,8 @@ Katie To Do:
 
 
 OTHER TODO
-Fix jump load for quotes
+Fix jump load for quotes??
+
+MAYBE
+make 2nd background
+make hidden and visible?

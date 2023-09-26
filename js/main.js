@@ -6,7 +6,13 @@
 
 function generate() {
     const elem = document.getElementById('quote');
-    elem.innerHTML = "Quote goes here!";
+    fetch("http://safetybelt.pythonanywhere.com/quotes/random")
+        .then(response => {
+            return response.json()
+        }).then(data => {
+            console.log(data)
+            elem.innerHTML = data.quote;
+        })
 }
 
 (function() {

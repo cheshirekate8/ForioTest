@@ -30,3 +30,10 @@ We also have another example where the user doesn't even have to click- the page
 Example:
 
 https://youtu.be/LFl9gZHSEQ0
+
+
+Katie To Do:
+1. Get the API call to work
+2. Do error handling/loading
+3. CSS
+4. timed thing

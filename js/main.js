@@ -7,21 +7,25 @@
 function generate() {
     const quote = document.getElementById('quote');
     const author = document.getElementById('author');
+    const container = document.getElementById('quote-container')
+    const button = document.getElementById('generate');
     fetch("http://safetybelt.pythonanywhere.com/quotes/random")
         .then(response => {
             if (!response.ok) {
-                const button = document.getElementById('generate');
                 button.click();
                 return;
             }
             return response.json()
         }).then(data => {
             console.log(data)
-            
             quote.innerHTML = data.quote;
             author.innerHTML = `- ${data.author}`
-        }).catch(error => {
-            console.log(error)
+            return data
+        }).then(data => {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            container.setAttribute("style", `background-color: #${randomColor};`)
+            button.setAttribute("style", `background-color: #${randomColor};`)
+
         })
 }
 

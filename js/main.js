@@ -8,6 +8,12 @@ function generate() {
     const elem = document.getElementById('quote');
     fetch("http://safetybelt.pythonanywhere.com/quotes/random")
         .then(response => {
+            if (!response.ok) {
+                elem.innerHTML = "Loading...";
+                const button = document.getElementById('generate');
+                button.click();
+                return;
+            }
             return response.json()
         }).then(data => {
             console.log(data)

@@ -37,3 +37,7 @@ Katie To Do:
 2. Do error handling/loading
 3. CSS
 4. timed thing
+
+
+OTHER TODO
+Fix jump load for quotes

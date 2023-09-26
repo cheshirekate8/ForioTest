@@ -9,3 +9,35 @@ body {
     padding: 0;
     margin: 0;
 }
+
+#quote-container {
+    background-color: lime;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 100vh;
+}
+
+#quote-wrapper {
+    background-color: red;
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 50vh;
+    max-height: 50vh;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote {
+    background-color: aquamarine;
+}
+
+#author {
+    background-color: goldenrod;
+    margin: 30px 0;
+}

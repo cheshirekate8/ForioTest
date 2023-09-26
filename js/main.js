@@ -5,11 +5,11 @@
 
 
 function generate() {
-    const elem = document.getElementById('quote');
+    const quote = document.getElementById('quote');
+    const author = document.getElementById('author');
     fetch("http://safetybelt.pythonanywhere.com/quotes/random")
         .then(response => {
             if (!response.ok) {
-                elem.innerHTML = "Loading...";
                 const button = document.getElementById('generate');
                 button.click();
                 return;
@@ -17,7 +17,11 @@ function generate() {
             return response.json()
         }).then(data => {
             console.log(data)
-            elem.innerHTML = data.quote;
+            
+            quote.innerHTML = data.quote;
+            author.innerHTML = `- ${data.author}`
+        }).catch(error => {
+            console.log(error)
         })
 }
 
@@ -29,4 +33,5 @@ function generate() {
             generate();
         });
     }
+    button.click();
 })();
